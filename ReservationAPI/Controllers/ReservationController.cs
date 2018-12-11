@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
+using ReservationAPI.Domain;
+using ReservationAPI.Models;
 
 namespace ReservationAPI.Controllers
 {
 	[Route("api/[controller]")]
+
 	/// <summary>
 	/// API controller for managing the reservations
 	/// </summary>
@@ -18,13 +20,11 @@ namespace ReservationAPI.Controllers
 			_service = service;
 		}
 
-
 		public IEnumerable<ReservationDetail> Get()
 		{
 			return _service.All();
 		}
 
-		// GET: api/Reservations/5
 		public ReservationDetail Get(int id)
 		{
 			return _service.GetById(id);

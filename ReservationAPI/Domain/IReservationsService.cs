@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+using ReservationAPI.Models;
 
-namespace ReservationAPI.Controllers
+namespace ReservationAPI.Domain
 {
 	public interface IReservationsService
 	{
@@ -14,6 +14,6 @@ namespace ReservationAPI.Controllers
 
 		ValidationResult Add(ReservationDetail item);
 		IEnumerable<ReservationDetail> GetAvailableItems(DateTime day);
-		IEnumerable<ReservationDetail> Get(DateTime day, int assetNumber);
+		IEnumerable<ReservationDetail> Get(DateTime day, int assetId);
 	}
 }
