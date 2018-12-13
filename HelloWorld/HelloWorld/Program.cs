@@ -12,6 +12,9 @@ namespace HelloWorld
 
             Console.WriteLine("Would you like to withdraw an amount? (Y/N)");
 
+            int myValue = 10;
+            var myResult = myValue.ToString();
+
             var isWithdrawal = Console.ReadLine();
 
             if (isWithdrawal != null && isWithdrawal.ToUpper() == "Y")
