@@ -12,7 +12,7 @@ namespace HelloWorld
 
             Console.WriteLine("Would you like to withdraw an amount? (Y/N)");
 
-            int myValue = 10;
+            int myValue = 15;
             var myResult = myValue.ToString();
 
             var isWithdrawal = Console.ReadLine();
